@@ -1,16 +1,14 @@
 package runner;
 
-import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resource/feature",
-        glue = {"steps"},
-        plugin = {"pretty", "html:target/cucumber-report.html"},
-        monochrome = true
+        features = "src/test/resources/feature/Navigation.feature",
+        glue = "stepdefinition"
+
 )
 public class TestRunner {
 
